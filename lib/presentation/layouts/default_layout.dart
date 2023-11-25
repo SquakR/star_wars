@@ -10,9 +10,13 @@ class DefaultLayout extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text("Star Wars"),
+        title: Text(
+          "Star Wars",
+          style: Theme.of(context).textTheme.titleLarge,
+        ),
       ),
-      body: child,
+      body: DefaultTextStyle.merge(
+          style: Theme.of(context).textTheme.bodySmall, child: child),
     );
   }
 }
