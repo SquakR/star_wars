@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import './presentation/pages/pages.dart';
 
@@ -13,6 +14,8 @@ class StarWarsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Star Wars',
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       theme: ThemeData(
         colorScheme: const ColorScheme.dark(
             primary: Color(0xffe3e1dd), inversePrimary: Color(0xff1c1e22)),
