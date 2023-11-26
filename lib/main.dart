@@ -10,9 +10,9 @@ void main() {
 
 class StarWarsApp extends StatelessWidget {
   static const primary = Color(0xffe3e1dd);
-  static const inversePrimary = Color(0xff1c1e22);
-  static const scaffoldBackground = Color(0xff282b30);
   static const secondary = Color(0xffffe300);
+  static const darkGray = Color(0xff1c1e22);
+  static const lightGray = Color(0xff282b30);
 
   const StarWarsApp({super.key});
 
@@ -42,15 +42,19 @@ class StarWarsApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: const ColorScheme.dark(
-            primary: primary,
-            inversePrimary: inversePrimary,
-            secondary: secondary),
+          primary: primary,
+          inversePrimary: darkGray,
+          secondary: secondary,
+        ),
         textTheme: const TextTheme(titleLarge: TextStyle(color: secondary)),
-        drawerTheme: const DrawerThemeData(backgroundColor: inversePrimary),
+        drawerTheme: const DrawerThemeData(backgroundColor: darkGray),
         bottomNavigationBarTheme:
-            const BottomNavigationBarThemeData(backgroundColor: inversePrimary),
-        listTileTheme: const ListTileThemeData(selectedColor: secondary),
-        scaffoldBackgroundColor: scaffoldBackground,
+            const BottomNavigationBarThemeData(backgroundColor: darkGray),
+        listTileTheme: const ListTileThemeData(
+          selectedColor: secondary,
+          tileColor: darkGray,
+        ),
+        scaffoldBackgroundColor: lightGray,
       ),
       routerConfig: GoRouter(routes: [
         GoRoute(

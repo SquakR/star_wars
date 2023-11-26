@@ -22,13 +22,13 @@ class SearchState<T> extends Equatable {
     String? search,
     int? page,
     bool? loading,
-    List<T>? values,
+    List<T>? itemList,
   }) {
     return SearchState(
       search: search ?? this.search,
       page: page ?? this.page,
       loading: loading ?? this.loading,
-      itemList: values ?? this.itemList,
+      itemList: itemList ?? this.itemList,
     );
   }
 }
@@ -49,13 +49,13 @@ class SearchBloc<T> extends Bloc<SearchBlocEvent, SearchState<T>> {
   final RemoteRepository<T> remoteRepository;
 
   Future<void> fetchCurrentPage(Emitter<SearchState<T>> emit) async {
-    final newValues = await remoteRepository.fetchMany(
+    final newItems = await remoteRepository.fetchMany(
       state.search,
       state.page,
     );
     emit(state.copyWith(
       loading: false,
-      values: [...state.itemList, ...newValues],
+      itemList: [...state.itemList, ...newItems],
     ));
   }
 

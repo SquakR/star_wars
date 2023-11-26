@@ -7,5 +7,8 @@
   "planets": "Planets",
   "charactersSearchHint": "Enter character name",
   "starshipsSearchHint": "Enter starship name",
-  "planetsSearchHint": "Enter planet name"
+  "planetsSearchHint": "Enter planet name",
+  "starshipNumber": "Starship number: {number}",
+  "enterSearchQuery": "Enter your search query",
+  "noResultsFound": "No results found"
 }

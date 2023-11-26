@@ -7,5 +7,8 @@
   "planets": "Планеты",
   "charactersSearchHint": "Введите имя персонажа",
   "starshipsSearchHint": "Введите название звездолета",
-  "planetsSearchHint": "Введите название планеты"
+  "planetsSearchHint": "Введите название планеты",
+  "starshipNumber": "Количество звездолетов: {number}",
+  "enterSearchQuery": "Введите ваш поисковый запрос",
+  "noResultsFound": "Ничего не найдено"
 }
