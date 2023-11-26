@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../layouts/layouts.dart';
+import '../widgets/widgets.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -9,8 +10,9 @@ class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultLayout(
-        title: AppLocalizations.of(context)!.settingsPageTitle,
-        activePath: '/settings',
-        child: const Text("SettingsPage"));
+      title: AppLocalizations.of(context)!.settingsPageTitle,
+      drawer: const StarWarsNavigationDrawer(activePath: '/settings'),
+      child: const Text("SettingsPage"),
+    );
   }
 }

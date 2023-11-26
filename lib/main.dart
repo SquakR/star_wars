@@ -47,6 +47,8 @@ class StarWarsApp extends StatelessWidget {
             secondary: secondary),
         textTheme: const TextTheme(titleLarge: TextStyle(color: secondary)),
         drawerTheme: const DrawerThemeData(backgroundColor: inversePrimary),
+        bottomNavigationBarTheme:
+            const BottomNavigationBarThemeData(backgroundColor: inversePrimary),
         listTileTheme: const ListTileThemeData(selectedColor: secondary),
         scaffoldBackgroundColor: scaffoldBackground,
       ),
