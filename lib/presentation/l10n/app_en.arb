@@ -1,3 +1,6 @@
 {
-  "title": "Star Wars"
+  "drawerTitle": "Star Wars",
+  "homePageTitle": "Search",
+  "favoritePageTitle": "Favorite",
+  "settingsPageTitle": "Settings"
 }

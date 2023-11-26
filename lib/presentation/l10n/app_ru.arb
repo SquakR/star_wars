@@ -1,6 +1,6 @@
 {
-  "title": "Звездные войны",
-  "@helloWorld": {
-    "description": "Заголовок приложения"
-  }
+  "drawerTitle": "Звездные войны",
+  "homePageTitle": "Поиск",
+  "favoritePageTitle": "Избранное",
+  "settingsPageTitle": "Настройки"
 }

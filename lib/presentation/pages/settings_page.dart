@@ -3,14 +3,14 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../layouts/layouts.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class SettingsPage extends StatelessWidget {
+  const SettingsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return DefaultLayout(
-        title: AppLocalizations.of(context)!.homePageTitle,
-        activePath: '/',
-        child: const Text("HomePage"));
+        title: AppLocalizations.of(context)!.settingsPageTitle,
+        activePath: '/settings',
+        child: const Text("SettingsPage"));
   }
 }
