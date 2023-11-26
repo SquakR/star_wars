@@ -58,13 +58,10 @@ class StarWarsApp extends StatelessWidget {
           pageBuilder: (context, state) => buildPage(state, const HomePage()),
         ),
         GoRoute(
-            path: '/favorite',
-            pageBuilder: (context, state) =>
-                buildPage(state, const FavoritePage())),
-        GoRoute(
-            path: '/settings',
-            pageBuilder: (context, state) =>
-                buildPage(state, const SettingsPage()))
+          path: '/favorite',
+          pageBuilder: (context, state) =>
+              buildPage(state, const FavoritePage()),
+        ),
       ]),
     );
   }

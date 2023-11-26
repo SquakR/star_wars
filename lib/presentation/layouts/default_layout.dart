@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DefaultLayout extends StatelessWidget {
-  final String title;
+  final Widget title;
   final Widget body;
   final Widget? drawer;
   final Widget? bottomNavigationBar;
@@ -14,17 +14,13 @@ class DefaultLayout extends StatelessWidget {
     this.bottomNavigationBar,
   });
 
-  static const paths = ['/', '/favorite', '/settings'];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 68,
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(
-          title,
-          style: Theme.of(context).textTheme.titleLarge,
-        ),
+        title: title,
       ),
       body: body,
       drawer: drawer,

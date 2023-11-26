@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:star_wars/models/models.dart';
 
 import '../layouts/layouts.dart';
@@ -13,17 +12,29 @@ class FavoritePage extends StatefulWidget {
 }
 
 class _FavoritePageState extends State<FavoritePage> {
-  final ValueNotifier<StarWarsEntity> starWarEntityController =
+  final ValueNotifier<StarWarsEntity> _starWarEntityController =
       ValueNotifier(StarWarsEntity.character);
+
+  final TextEditingController _searchController = SearchController();
+
+  @override
+  void dispose() {
+    _starWarEntityController.dispose();
+    _searchController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return DefaultLayout(
-      title: AppLocalizations.of(context)!.favoritePageTitle,
+      title: StarWarsSearch(
+        searchController: _searchController,
+        starWarEntityController: _starWarEntityController,
+      ),
       drawer: const StarWarsNavigationDrawer(activePath: '/favorite'),
       bottomNavigationBar:
-          StarWarsBottomNavigationBar(controller: starWarEntityController),
-      body: const Text("FavoritePage"),
+          StarWarsBottomNavigationBar(controller: _starWarEntityController),
+      body: const Text('FavoritePage'),
     );
   }
 }

@@ -10,14 +10,14 @@ class StarWarsNavigationDrawer extends StatelessWidget {
     required this.activePath,
   });
 
-  static const paths = ['/', '/favorite', '/settings'];
+  static const _paths = ['/', '/favorite', '/settings'];
 
   @override
   Widget build(BuildContext context) {
     return NavigationDrawer(
-      selectedIndex: paths.indexOf(activePath),
+      selectedIndex: _paths.indexOf(activePath),
       onDestinationSelected: (int index) {
-        context.go(paths[index]);
+        context.go(_paths[index]);
       },
       children: [
         Padding(
@@ -36,11 +36,6 @@ class StarWarsNavigationDrawer extends StatelessWidget {
           label: Text(AppLocalizations.of(context)!.favoritePageTitle),
           icon: const Icon(Icons.favorite_outline),
           selectedIcon: const Icon(Icons.favorite),
-        ),
-        NavigationDrawerDestination(
-          label: Text(AppLocalizations.of(context)!.settingsPageTitle),
-          icon: const Icon(Icons.search_outlined),
-          selectedIcon: const Icon(Icons.settings),
         ),
       ],
     );

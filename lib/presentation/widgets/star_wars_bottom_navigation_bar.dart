@@ -7,7 +7,7 @@ class StarWarsBottomNavigationBar extends StatelessWidget {
 
   const StarWarsBottomNavigationBar({super.key, required this.controller});
 
-  static const entities = [
+  static const _entities = [
     StarWarsEntity.character,
     StarWarsEntity.starship,
     StarWarsEntity.planet,
@@ -19,9 +19,9 @@ class StarWarsBottomNavigationBar extends StatelessWidget {
       valueListenable: controller,
       builder: (context, value, child) {
         return BottomNavigationBar(
-          currentIndex: entities.indexOf(value),
+          currentIndex: _entities.indexOf(value),
           onTap: (index) {
-            controller.value = entities[index];
+            controller.value = _entities[index];
           },
           items: [
             BottomNavigationBarItem(
