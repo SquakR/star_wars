@@ -23,7 +23,7 @@ class _FavoritePageState extends State<FavoritePage> {
       drawer: const StarWarsNavigationDrawer(activePath: '/favorite'),
       bottomNavigationBar:
           StarWarsBottomNavigationBar(controller: starWarEntityController),
-      child: const Text("FavoritePage"),
+      body: const Text("FavoritePage"),
     );
   }
 }

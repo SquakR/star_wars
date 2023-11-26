@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:star_wars/models/models.dart';
 
 class StarWarsBottomNavigationBar extends StatelessWidget {
@@ -22,12 +23,19 @@ class StarWarsBottomNavigationBar extends StatelessWidget {
           onTap: (index) {
             controller.value = entities[index];
           },
-          items: const [
+          items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.android), label: 'Characters'),
+              icon: const Icon(Icons.android),
+              label: AppLocalizations.of(context)!.characters,
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.rocket), label: 'Starships'),
-            BottomNavigationBarItem(icon: Icon(Icons.public), label: 'Planets'),
+              icon: const Icon(Icons.rocket),
+              label: AppLocalizations.of(context)!.starships,
+            ),
+            BottomNavigationBarItem(
+              icon: const Icon(Icons.public),
+              label: AppLocalizations.of(context)!.planets,
+            ),
           ],
         );
       },

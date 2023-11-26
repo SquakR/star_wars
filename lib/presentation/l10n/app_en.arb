@@ -2,5 +2,9 @@
   "drawerTitle": "Star Wars",
   "homePageTitle": "Search",
   "favoritePageTitle": "Favorite",
-  "settingsPageTitle": "Settings"
+  "settingsPageTitle": "Settings",
+  "characters": "Characters",
+  "starships": "Starships",
+  "planets": "Planets",
+  "search": "Search"
 }

@@ -12,7 +12,7 @@ class SettingsPage extends StatelessWidget {
     return DefaultLayout(
       title: AppLocalizations.of(context)!.settingsPageTitle,
       drawer: const StarWarsNavigationDrawer(activePath: '/settings'),
-      child: const Text("SettingsPage"),
+      body: const Text("SettingsPage"),
     );
   }
 }

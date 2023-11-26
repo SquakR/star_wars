@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class DefaultLayout extends StatelessWidget {
   final String title;
-  final Widget child;
+  final Widget body;
   final Widget? drawer;
   final Widget? bottomNavigationBar;
 
   const DefaultLayout({
     super.key,
     required this.title,
-    required this.child,
+    required this.body,
     this.drawer,
     this.bottomNavigationBar,
   });
@@ -26,7 +26,7 @@ class DefaultLayout extends StatelessWidget {
           style: Theme.of(context).textTheme.titleLarge,
         ),
       ),
-      body: child,
+      body: body,
       drawer: drawer,
       bottomNavigationBar: bottomNavigationBar,
     );

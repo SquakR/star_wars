@@ -2,5 +2,9 @@
   "drawerTitle": "Звездные войны",
   "homePageTitle": "Поиск",
   "favoritePageTitle": "Избранное",
-  "settingsPageTitle": "Настройки"
+  "settingsPageTitle": "Настройки",
+  "characters": "Персонажи",
+  "starships": "Звездолеты",
+  "planets": "Планеты",
+  "search": "Поиск"
 }

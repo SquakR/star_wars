@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
       drawer: const StarWarsNavigationDrawer(activePath: '/'),
       bottomNavigationBar:
           StarWarsBottomNavigationBar(controller: starWarEntityController),
-      child: const Text("HomePage"),
+      body: const Text("HomePage"),
     );
   }
 }
