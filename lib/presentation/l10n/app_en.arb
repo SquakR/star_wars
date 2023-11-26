@@ -5,7 +5,6 @@
   "characters": "Characters",
   "starships": "Starships",
   "planets": "Planets",
-  "search": "Search",
   "charactersSearchHint": "Enter character name",
   "starshipsSearchHint": "Enter starship name",
   "planetsSearchHint": "Enter planet name"

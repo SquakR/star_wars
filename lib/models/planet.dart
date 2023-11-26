@@ -1,15 +1,15 @@
 class Planet {
-  final String url;
+  final String uri;
   final String name;
   final int diameter;
   final int population;
-  final String filmUrls;
+  final String filmUris;
 
   Planet({
-    required this.url,
+    required this.uri,
     required this.name,
     required this.diameter,
     required this.population,
-    required this.filmUrls,
+    required this.filmUris,
   });
 }

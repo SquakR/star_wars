@@ -1,15 +1,15 @@
 class Starship {
-  final String url;
+  final String uri;
   final String name;
   final String model;
   final int? passengers;
-  final List<String> filmUrls;
+  final List<String> filmUris;
 
   Starship({
-    required this.url,
+    required this.uri,
     required this.name,
     required this.model,
     required this.passengers,
-    required this.filmUrls,
+    required this.filmUris,
   });
 }

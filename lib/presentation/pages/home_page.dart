@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
-      valueListenable: _searchController,
+      valueListenable: _starWarEntityController,
       builder: (context, value, child) {
         return DefaultLayout(
           title: StarWarsSearch(
@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
           drawer: const StarWarsNavigationDrawer(activePath: '/'),
           bottomNavigationBar:
               StarWarsBottomNavigationBar(controller: _starWarEntityController),
-          body: Text(value),
+          body: CharactersList(searchController: _searchController),
         );
       },
     );
