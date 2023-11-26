@@ -15,7 +15,7 @@ class _FavoritePageState extends State<FavoritePage> {
   final ValueNotifier<StarWarsEntity> _starWarEntityController =
       ValueNotifier(StarWarsEntity.character);
 
-  final TextEditingController _searchController = SearchController();
+  final ValueNotifier<String> _searchController = ValueNotifier("");
 
   @override
   void dispose() {
@@ -26,15 +26,20 @@ class _FavoritePageState extends State<FavoritePage> {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultLayout(
-      title: StarWarsSearch(
-        searchController: _searchController,
-        starWarEntityController: _starWarEntityController,
-      ),
-      drawer: const StarWarsNavigationDrawer(activePath: '/favorite'),
-      bottomNavigationBar:
-          StarWarsBottomNavigationBar(controller: _starWarEntityController),
-      body: const Text('FavoritePage'),
+    return ValueListenableBuilder(
+      valueListenable: _searchController,
+      builder: (context, value, child) {
+        return DefaultLayout(
+          title: StarWarsSearch(
+            searchController: _searchController,
+            starWarEntityController: _starWarEntityController,
+          ),
+          drawer: const StarWarsNavigationDrawer(activePath: '/favorite'),
+          bottomNavigationBar:
+              StarWarsBottomNavigationBar(controller: _starWarEntityController),
+          body: Text(value),
+        );
+      },
     );
   }
 }

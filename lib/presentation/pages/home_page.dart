@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   final ValueNotifier<StarWarsEntity> _starWarEntityController =
       ValueNotifier(StarWarsEntity.character);
 
-  final TextEditingController _searchController = SearchController();
+  final ValueNotifier<String> _searchController = ValueNotifier("");
 
   @override
   void dispose() {
@@ -26,15 +26,20 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultLayout(
-      title: StarWarsSearch(
-        searchController: _searchController,
-        starWarEntityController: _starWarEntityController,
-      ),
-      drawer: const StarWarsNavigationDrawer(activePath: '/'),
-      bottomNavigationBar:
-          StarWarsBottomNavigationBar(controller: _starWarEntityController),
-      body: const Text('HomePage'),
+    return ValueListenableBuilder(
+      valueListenable: _searchController,
+      builder: (context, value, child) {
+        return DefaultLayout(
+          title: StarWarsSearch(
+            searchController: _searchController,
+            starWarEntityController: _starWarEntityController,
+          ),
+          drawer: const StarWarsNavigationDrawer(activePath: '/'),
+          bottomNavigationBar:
+              StarWarsBottomNavigationBar(controller: _starWarEntityController),
+          body: Text(value),
+        );
+      },
     );
   }
 }
